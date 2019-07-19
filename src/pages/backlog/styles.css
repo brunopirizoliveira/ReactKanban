@@ -1,0 +1,7 @@
+.backlog {
+    flex:1;
+    background-color: gainsboro;
+    min-width: 300px !important;        
+    height: 100vh;   
+    overflow-x: scroll;
+}

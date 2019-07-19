@@ -1,0 +1,11 @@
+.sprint {
+    flex:3;
+    display: flex;
+    background-color: white;    
+    width: 60%;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;    
+    overflow-y: scroll;
+}
