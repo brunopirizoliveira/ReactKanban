@@ -7,7 +7,7 @@ export default class HeaderBacklog extends Component {
     render() {
         return(
             <div className="header-backlog">
-                Backlog
+                {this.props.title}
             </div>
         )
     }

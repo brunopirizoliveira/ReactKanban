@@ -9,7 +9,7 @@ export default class Backlog extends Component {
     render() {
         return(
             <div className="backlog">
-                <HeaderBacklog />
+                <HeaderBacklog title={this.props.backlog.title} />
                 <ListCardsBacklog />
             </div>
         )
