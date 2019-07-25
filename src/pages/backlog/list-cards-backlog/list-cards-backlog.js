@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import './styles.css';
 
+import CardBacklog from './card-backlog/card-backlog';
+
 export default class ListCardsBacklog extends Component {
 
     constructor() {
@@ -16,7 +18,7 @@ export default class ListCardsBacklog extends Component {
         fetch('http://wpoa000939:3000/users', { method: 'GET'})
         .then(responseUsers => responseUsers.json())
         .then(dataUsers => this.setState({lista: dataUsers.recordset}))
-     }
+    }
 
     // Component acabou de ser montado
     // componentDidMount() { }
@@ -28,9 +30,7 @@ export default class ListCardsBacklog extends Component {
                 {
                     this.state.lista.map((currElement, index) => {
                         return(
-                            <div key={index}>
-                                <li className="list-group-item">{currElement.nmusuario}</li>
-                            </div>
+                            <CardBacklog keyCard={index} nameCard={currElement.nmusuario} />
                         );
                     })
                 }
