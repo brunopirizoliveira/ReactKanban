@@ -6,7 +6,7 @@ import Sprint from '../sprint/sprint';
 
 const dados = {
     backlog: {
-        title: "Backlog 1"
+        title: "Backlog 3"
     },
     sprint: {
         title: "Sprint"
@@ -18,8 +18,8 @@ export default class Wrapper extends Component {
     render() {
         return(
             <div className="wrapper">
-                <Backlog backlog={dados.backlog} />
-                <Sprint sprint={dados.sprint} />
+                <Backlog area={dados.backlog} />
+                <Sprint area={dados.sprint} />
             </div>
         )
     }
