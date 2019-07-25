@@ -7,7 +7,7 @@ export default class CardBacklog extends Component {
     render() {
         return(
 
-            <div key={this.props.keyCard} className="list-group-item">
+            <div key={this.props.cdChamado} className="list-group-item">
                 <span className="header-chamado">{this.props.cdChamado}
                     &nbsp;-&nbsp;
                     <span className="header-chamado-title">{this.props.clienteChamado}&nbsp;-&nbsp;{this.props.severidadeChamado}</span>

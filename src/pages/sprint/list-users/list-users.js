@@ -21,7 +21,6 @@ export default class ListUsers extends Component {
     render() {
         return(
             <div>
-
                 {
                     this.state.lista.map((users) => {
                         return( 
@@ -31,8 +30,7 @@ export default class ListUsers extends Component {
                             />            
                         );
                     })
-                }                
-                
+                }
             </div>
         )
     }

@@ -15,21 +15,20 @@ export default class ListCardsBacklog extends Component {
 
     // Antes do Component ser montado
     componentWillMount() {
-
         fetch('http://wpoa000939:3000/chamados', {method: 'GET'})
         .then(responseChamados => responseChamados.json())
-        .then(dataChamados => this.setState({lista: dataChamados.recordset}))
+        .then(dataChamados => this.setState({lista: dataChamados.recordset}));
     }
 
     render() {
         return(
-            <div className="list-cards-backlog ">
+            <div key="1" className="list-cards-backlog ">
                 
                 {
                     this.state.lista.filter(chamado => chamado.nmusuario == null).map((currElement) => {
                         return(
                             <CardBacklog 
-                                keyCard={currElement.cdchamado} 
+                                key={currElement.cdchamado} 
                                 cdChamado={currElement.cdchamado}
                                 clienteChamado={currElement.nmcliente}
                                 severidadeChamado={currElement.nmseveridade}
