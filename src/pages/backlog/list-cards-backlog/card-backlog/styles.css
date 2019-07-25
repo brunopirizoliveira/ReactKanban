@@ -1,5 +1,12 @@
-.list-cards-backlog {
-    margin-top: 2px;
-    min-height: 600px;
-    background-color: white;
+
+.header-chamado {
+    font-weight: bold;
+}
+
+.header-chamado-title{
+    display: initial;
+}
+
+.description-chamado{    
+    display: initial;
 }
