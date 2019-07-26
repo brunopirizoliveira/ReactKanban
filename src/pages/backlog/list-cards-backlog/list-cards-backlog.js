@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './styles.css';
+import api from '../../../services/api';
 
 import CardBacklog from './card-backlog/card-backlog';
 
@@ -14,10 +15,11 @@ export default class ListCardsBacklog extends Component {
     }
 
     // Antes do Component ser montado
-    componentWillMount() {
-        fetch('http://wpoa000939:3000/chamados', {method: 'GET'})
-        .then(responseChamados => responseChamados.json())
-        .then(dataChamados => this.setState({lista: dataChamados.recordset}));
+    async componentWillMount() {
+        const response = await 
+        api.get('/chamados');
+        
+        this.setState({ lista: response.data.recordset });
     }
 
     render() {

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 import './styles.css';
+
+import api from '../../../services/api';
+
 import ListCardsUsers from './list-cards-users/list-cards-users';
 
 export default class ListUsers extends Component {
@@ -12,10 +15,12 @@ export default class ListUsers extends Component {
         }
     }
 
-    componentWillMount() {
-        fetch('http://wpoa000939:3000/users', { method: 'GET'})
-        .then(responseUsers => responseUsers.json())
-        .then(dataUsers => this.setState({lista: dataUsers.recordset}))
+    async componentWillMount() {
+
+        const response = await 
+        api.get('/users'); 
+               
+        this.setState({ lista: response.data.recordset });
     }    
 
     render() {
